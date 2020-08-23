@@ -1,8 +1,8 @@
 
 #ESP32
 build/
-sdkconfig
-sdkconfig.old
+/sdkconfig
+/sdkconfig.old
 debug.log
 test/build/
 test/sdkconfig.old

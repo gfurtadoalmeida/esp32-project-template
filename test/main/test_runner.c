@@ -18,7 +18,7 @@ void app_main(void)
 
     /* This function will not return, and will be busy waiting for UART input.
      * That's why "test/sdkconfig -> CONFIG_TASK_WDT_CHECK_IDLE_TASK_CPU0" is
-     * disabled.
+     * disabled (commented).
      */
     unity_run_menu();
 }
