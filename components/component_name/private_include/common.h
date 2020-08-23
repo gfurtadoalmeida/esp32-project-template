@@ -14,7 +14,7 @@ extern "C"
     //Change the tag name and value.
     static const char *COMPONENT_NAME_TAG = "component_name";
 
-/**value.
+/**
  * @brief Macro that forces a method to return a value
  * based on a failed condition.
  *
