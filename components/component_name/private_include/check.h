@@ -1,5 +1,5 @@
-#ifndef __COMMON_H__
-#define __COMMON_H__
+#ifndef __CHECK_H__
+#define __CHECK_H__
 
 #include "esp_log.h"
 
@@ -37,4 +37,4 @@ extern "C"
 }
 #endif
 
-#endif //__COMMON_H__
+#endif //__CHECK_H__
