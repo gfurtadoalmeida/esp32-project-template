@@ -36,7 +36,7 @@
             "type": "String"
         },
         "vm_admin_password": {
-            "type": "String"
+            "type": "securestring"
         },
         "vm_shutdown_time": {
             "defaultValue": "2300",
@@ -82,7 +82,6 @@
                     "osDisk": {
                         "osType": "Windows",
                         "createOption": "FromImage",
-                        "caching": "ReadWrite",
                         "managedDisk": {
                             "storageAccountType": "StandardSSD_LRS"
                         }
@@ -92,14 +91,7 @@
                 "osProfile": {
                     "computerName": "[parameters('vm_name')]",
                     "adminUsername": "[parameters('vm_admin_username')]",
-                    "adminPassword": "[parameters('vm_admin_password')]",
-                    "windowsConfiguration": {
-                        "provisionVMAgent": true,
-                        "enableAutomaticUpdates": true
-                    },
-                    "secrets": [],
-                    "allowExtensionOperations": true,
-                    "requireGuestProvisionSignal": true
+                    "adminPassword": "[parameters('vm_admin_password')]"
                 },
                 "networkProfile": {
                     "networkInterfaces": [
