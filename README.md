@@ -1,11 +1,11 @@
 # ESP32 Project Template
 
-ESP32 project template, including tests and able to work on VS Code.  
+ESP32 project template, including tests, automated build pipeline and able to work on VS Code.  
 
 ## Features
 
-* It compiles 🚀
-* Prepared for tests.
+* Prepared for tests 🧪
+* Automated build pipeline 🚀
 * VS Code task for tests:
   * `Build test`
   * `Flash test`
@@ -13,6 +13,8 @@ ESP32 project template, including tests and able to work on VS Code.
   * `Build, flash and start a monitor for the tests`
 
 Note: for VS Code it's highly recommended to install the official [ESP-IDF Extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension), for a better experience.
+
+Instructions regarding the build pipeline are in the [.pipeline](/.pipeline/) folder.
 
 ## You Need to Change
 
