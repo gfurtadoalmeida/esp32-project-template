@@ -16,7 +16,12 @@ pool:
   - ESP-IDF -equals True
 
 steps:
+- checkout: self
+  displayName: Checkout
+  lfs: false
+  submodules: recursive
 - task: PowerShell@2
+  displayName: Build
   inputs:
     targetType: 'inline'
     failOnStderr: true
