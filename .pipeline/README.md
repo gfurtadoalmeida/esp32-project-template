@@ -1,12 +1,12 @@
 # Pipeline for Build Automation
 
-The pipeline will run only on [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/).
+The pipeline was made for [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/).
 
 On your Azure DevOps, the agent must have the following [custom capability](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/demands?view=azure-devops&tabs=yaml):
 
 * `ESP-IDF` = `True`
 
-On the [virtual-machine folder](/.pipeline/virtual-machine/) there are scripts and ARM templates to create a virtual machine capable of building ESP-IDF projects.
+In the [virtual-machine](/.pipeline/virtual-machine/) folder there are scripts and ARM templates to create a virtual machine capable of building ESP-IDF projects.
 
 ## Virtual Machine Characteristics
 
@@ -26,9 +26,21 @@ Just click the button bellow and follow the instructions.
 
 ## Installing the Software
 
+### Requirements
+
+* Azure DevOps [Personal Access Token (PAT)](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page).
+* Azure DevOps [organization URL](https://docs.microsoft.com/en-us/azure/devops/extend/develop/work-with-urls?view=azure-devops&tabs=http).
+
+### Procedure
+
 1. Open a RDP session to the VM.
 2. Copy [Install-Tools.ps1](/.pipeline/virtual-machine/Install-Tools.ps1)
-3. Edit the script, adding the missing values on lines 1, 2 and 3 (optional).
-4. Run it.
+3. Edit the script, adding the missing values:
+   * Line 1: organization URL.
+   * Line 2: Personal Access Token (PAT).
+4. Open PowerShell as Administrator:
+   1. Run `Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`
+   2. Run the script.
+   3. Run `Set-ExecutionPolicy -ExecutionPolicy AllSigned -Scope CurrentUser`
 
-Unfortunately the ESP-IDF installer opens a command prompt at the end of the installation; you need to close it so the script can proceed.
+Unfortunately the ESP-IDF installer opens a command prompt at the end of the installation, you need to close it so the script can proceed.

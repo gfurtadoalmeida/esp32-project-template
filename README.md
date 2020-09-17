@@ -1,11 +1,13 @@
 # ESP32 Project Template
 
+![Azure DevOps builds](https://img.shields.io/azure-devops/build/gfurtadoalmeida/GitHub/38?)
+
 ESP32 project template, including tests, automated build pipeline and able to work on VS Code.  
 
 ## Features
 
 * Prepared for tests 🧪
-* Automated build pipeline 🚀
+* [Automated build pipeline](/.pipeline/) 🚀
 * VS Code task for tests:
   * `Build test`
   * `Flash test`
@@ -13,8 +15,6 @@ ESP32 project template, including tests, automated build pipeline and able to wo
   * `Build, flash and start a monitor for the tests`
 
 Note: for VS Code it's highly recommended to install the official [ESP-IDF Extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension), for a better experience.
-
-Instructions regarding the build pipeline are in the [.pipeline](/.pipeline/) folder.
 
 ## You Need to Change
 
