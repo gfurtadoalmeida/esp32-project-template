@@ -1,5 +1,6 @@
-# ESP32 Project Template ![Azure DevOps builds](https://img.shields.io/azure-devops/build/gfurtadoalmeida/GitHub/38?)
+# ESP32 Project Template
 
+![Azure DevOps builds](https://img.shields.io/azure-devops/build/gfurtadoalmeida/GitHub/38?)  
 ESP32 project template, including tests, automated build pipeline and able to work on VS Code.  
 
 ## Features
