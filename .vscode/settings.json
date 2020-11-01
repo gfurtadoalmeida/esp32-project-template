@@ -25,7 +25,7 @@
   "idf.port": "/dev/ttyUSB1",
   "idf.portWin": "COM4",
   "idf.openOcdConfigs": [
-    "interface/ftdi/cjmcu-ftdi-2232HL.cfg",
+    "interface/cjmcu-ftdi-2232HL.cfg",
     "board/esp-wroom-32.cfg"
   ]
 }
