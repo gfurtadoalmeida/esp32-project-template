@@ -44,7 +44,7 @@ Note: for VS Code it's highly recommended to install the official [ESP-IDF Exten
     * [test.c](/components/component_name/test/test.c):
       * Add your tests.
 
-## Building
+## Building 🔨
 
 ### On VS Code
 
@@ -54,7 +54,21 @@ Note: for VS Code it's highly recommended to install the official [ESP-IDF Exten
 
 ```idf.py build``` on the root folder.
 
-## Testing
+## Debugging 🧩
+
+On the [/.debug](/.debug/) folder you'll find interface configuration files for debug boards. Choose one and copy it to the `%IDF_TOOLS_PATH%\tools\openocd-esp32\{version}\openocd-esp32\share\openocd\scripts\interface` folder.
+
+Boards:
+
+* [CJMCU-FTDI-2232HL](https://www.aliexpress.com/wholesale?SearchText=cjmcu+2232hl)
+
+### Using FTDI based boards
+
+1. Install the latest [FTDI VPC Driver](https://www.ftdichip.com/Drivers/VCP.htm).
+2. Plug the debug board.
+3. Open [Zadig](https://zadig.akeo.ie/) and replace the `Dual RS232-HS (Interface 0)` driver to WinUSB (`Options->List all devices`).
+
+## Testing 🧪
 
 ### On VS Code
 
