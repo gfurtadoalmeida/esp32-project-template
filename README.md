@@ -1,9 +1,9 @@
 # ESP32 Project Template
 
 ![Azure DevOps builds](https://img.shields.io/azure-devops/build/gfurtadoalmeida/GitHub/38?)  
-ESP32 project template, including tests, automated build pipeline and able to work on VS Code.  
+ESP32 project template, including tests, automated build pipeline and VS Code support.  
 
-## Features
+## Characteristics
 
 * Prepared for tests 🧪
 * [Automated build pipeline](/.pipeline/) 🚀
@@ -13,9 +13,7 @@ ESP32 project template, including tests, automated build pipeline and able to wo
   * `Monitor test`
   * `Build, flash and start a monitor for the tests`
 
-Note: for VS Code it's highly recommended to install the official [ESP-IDF Extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension), for a better experience.
-
-## You Need to Change
+## You'll Need to Change
 
 * [CMakeLists.txt](/CMakeLists.txt):
   * Change the `project-name`.
@@ -44,9 +42,21 @@ Note: for VS Code it's highly recommended to install the official [ESP-IDF Exten
     * [test.c](/components/component_name/test/test.c):
       * Add your tests.
 
+## Development Guidelines
+
+* The code must run on any ESP32+ hardware.
+* Create tests for every new functionality.
+
 ## Building 🔨
 
+### Requirements
+
+* [CMake](https://cmake.org/): 3.5+, must be on PATH environment variable.
+* [ESP-IDF](https://github.com/espressif/esp-idf): use the the last stable one.
+
 ### On VS Code
+
+It's highly recommended to install the official [ESP-IDF Extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension), for a better experience.  
 
 ```ctrl+shif+b``` or ```ctrl+shif+p -> Task: Run Task -> Build```
 
@@ -62,13 +72,15 @@ Boards:
 
 * [CJMCU-FTDI-2232HL](https://www.aliexpress.com/wholesale?SearchText=cjmcu+2232hl)
 
-### Using FTDI based boards
+Driver configuration:
 
 1. Install the latest [FTDI VPC Driver](https://www.ftdichip.com/Drivers/VCP.htm).
 2. Plug the debug board.
-3. Open [Zadig](https://zadig.akeo.ie/) and replace the `Dual RS232-HS (Interface 0)` driver to WinUSB (`Options->List all devices`).
+3. Open [Zadig](https://zadig.akeo.ie/) and replace the `Dual RS232-HS (Interface 0)` driver with WinUSB (`Options->List all devices`).
 
 ## Testing 🧪
+
+The task watchdog for CPU0 is disabled on the test project. It is needed so we can interact with the test tool.  
 
 ### On VS Code
 
@@ -80,7 +92,8 @@ You can do it in one command using `ctrl+shif+p -> Task: Run Task -> Build, flas
 
 ### With ESP-IDF
 
-All commands must be run on the test runner folder.
+All commands must be run on the test runner folder.  
+Change the COM port to the one you're using.  
 
 1. Build the test project: `idf.py build`
 2. Flash the test project: `idf.py flash -p COM4`
