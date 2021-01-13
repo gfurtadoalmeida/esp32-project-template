@@ -59,22 +59,32 @@ function Download-File {
         $wc.DownloadFile($Uri, $Destination)
     }
 
-    Write-Verbose 'done.'
+    Write-Host 'done.'
 }
 
 # Download the ESP-IDF Framework tools.
 
 $esp_idf_download_path = "$env:TEMP\espidf.exe"
-$esp_idf_install_dir = 'C:\espidf'
 
-Download-File -Name 'espidf' `
+Download-File -Name 'ESP-IDF' `
     -Uri 'https://dl.espressif.com/dl/esp-idf-tools-setup-2.3.exe' `
     -Destination $esp_idf_download_path
+
+# Download the VSTS Pipeline Agent.
+
+$vsts_agent_url = Find-Url -Url 'https://github.com/microsoft/azure-pipelines-agent/releases' `
+    -Pattern 'agent\/([\.\d]+)\/([A-z-]*-win-x64-[\.\d]+\.zip)' `
+    -Format 'https://vstsagentpackage.azureedge.net/agent/$($Matches[1])/$($Matches[2])'
+
+$vsts_agent_download_path = "$env:TEMP\vstsagent.zip"
+
+Download-File -Name 'VSTS Agent' -Uri $vsts_agent_url -Destination $vsts_agent_download_path
 
 # ESP-IDF installer will install on whatever folder
 # is set on env var 'IDF_TOOLS_PATH'.
 # We want to install it on 'C:\espidf'.
 
+$esp_idf_install_dir = 'C:\espidf'
 $env:IDF_TOOLS_PATH = $esp_idf_install_dir
 
 Write-Host 'Installing ESP-IDF Framework Tools...'
@@ -126,17 +136,10 @@ $sys_path = [System.Environment]::GetEnvironmentVariable('PATH', [System.Environ
 
 [System.Environment]::SetEnvironmentVariable('PATH', "$sys_path;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64", [System.EnvironmentVariableTarget]::Machine)
 
-# Download, unzip and install the VSTS Pipeline Agent
-# on 'C:\vstsagent' folder.
-
-$vsts_agent_url = Find-Url -Url 'https://github.com/microsoft/azure-pipelines-agent/releases' `
-    -Pattern 'agent\/([\.\d]+)\/([A-z-]*-win-x64-[\.\d]+\.zip)' `
-    -Format 'https://vstsagentpackage.azureedge.net/agent/$($Matches[1])/$($Matches[2])'
+# Unzip and install the VSTS Pipeline Agent on 'C:\vstsagent' folder.
 
 $vsts_agent_unzip_dir = New-Item -Path 'C:\' -Name 'vstsagent' -ItemType Directory
-$vsts_agent_download_path = "$env:TEMP\vstsagent.zip"
 
-Download-File -Name 'vstsagent' -Uri $vsts_agent_url -Destination $vsts_agent_download_path
 Expand-Archive -Path $vsts_agent_download_path -DestinationPath $vsts_agent_unzip_dir
 
 Write-Host 'Installing Azure DevOps Agent...'
