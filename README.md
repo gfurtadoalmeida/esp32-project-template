@@ -6,7 +6,7 @@ ESP32 project template, including tests, automated build pipeline and VS Code su
 ## Characteristics
 
 * Prepared for tests 🧪
-* [Automated build pipeline](/.pipeline/) 🚀
+* [Automated build pipeline](https://github.com/gfurtadoalmeida/esp32-project-template/wiki/Automated-Build) 🚀
 * VS Code task for tests:
   * `Build test`
   * `Flash test`
