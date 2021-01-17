@@ -23,6 +23,12 @@ steps:
     command: 'login'
     addPipelineData: false
 - task: PowerShell@2
+  displayName: Pull ESP-IDF Image
+  inputs:
+    targetType: 'inline'
+    failOnStderr: false
+    script: docker pull espressif/idf:latest
+- task: PowerShell@2
   displayName: Build
   inputs:
     targetType: 'inline'
