@@ -21,7 +21,7 @@
     "sdkconfig.old": true,
     "test/build/": true,
     "test/sdkconfig.old": true,
-    "test/sdkconfig": true,
+    "test/sdkconfig": true
   },
   "idf.port": "/dev/ttyUSB1",
   "idf.portWin": "COM4",

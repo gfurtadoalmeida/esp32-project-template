@@ -1,10 +1,11 @@
 
-#ESP32
+# ESP-IDF project files
 build/
-/sdkconfig
-/sdkconfig.old
+sdkconfig
+sdkconfig.old
 debug.log
 test/build/
+test/sdkconfig
 test/sdkconfig.old
 
 # Prerequisites
