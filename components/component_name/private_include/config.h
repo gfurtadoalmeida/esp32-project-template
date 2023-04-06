@@ -1,15 +1,15 @@
-#ifndef __CONFIG__
-#define __CONFIG__
+#ifndef __COMPONENT_NAME_CONFIG_H__
+#define __COMPONENT_NAME_CONFIG_H__
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-/* The "defines" below will also be defined in the
-   "sdkconfig" file when running "idf.py menuconfig".
-   Once defined there, the ones below will have no effect.
-*/
+   /* The "defines" below will also be defined in the
+      "sdkconfig" file when running "idf.py menuconfig".
+      Once defined there, the ones below will have no effect.
+   */
 
 #ifndef CONFIG_COMP_NAME_CONFIG_ONE
 /**
@@ -18,4 +18,7 @@ extern "C"
 #define CONFIG_COMP_NAME_CONFIG_ONE 50
 #endif
 
-#endif //__CONFIG__
+#ifdef __cplusplus
+}
+#endif
+#endif

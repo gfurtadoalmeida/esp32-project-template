@@ -9,6 +9,5 @@ idf_component_register(
         "../private_include"
     REQUIRES
         unity
-        # Change the component name.
         component_name
 )

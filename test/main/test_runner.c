@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "unity.h"
 
 static void print_banner(const char *text);

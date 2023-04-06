@@ -7,4 +7,4 @@ menu "Component_Name Configuration"
         help
             Full description for help.
 
-endmenu # Component_Name Configuration
+endmenu

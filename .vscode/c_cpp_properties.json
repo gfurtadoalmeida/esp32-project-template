@@ -19,5 +19,11 @@
       }
     }
   ],
+  "clang_format_style": "Visual Studio",
+  "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+  "configurationProvider": "ms-vscode.cmake-tools",
+  "intelliSenseEngine": "default",
+  "intelliSenseEngineFallback": "enabled",
+  "intelliSenseMode": "windows-msvc-x86",
   "version": 4
 }
