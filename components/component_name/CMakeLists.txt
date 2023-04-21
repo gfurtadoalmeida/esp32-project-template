@@ -7,6 +7,4 @@ idf_component_register(
         "include"
     PRIV_INCLUDE_DIRS
         "private_include"
-    REQUIRES
-        freertos
 )
