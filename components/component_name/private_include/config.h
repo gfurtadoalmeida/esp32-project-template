@@ -11,11 +11,11 @@ extern "C"
       Once defined there, the ones below will have no effect.
    */
 
-#ifndef CONFIG_COMP_NAME_CONFIG_ONE
+#ifndef CONFIG_COMPONENT_NAME_CONFIG_ONE
 /**
  * @brief Number for something nice.
  */
-#define CONFIG_COMP_NAME_CONFIG_ONE 50
+#define CONFIG_COMPONENT_NAME_CONFIG_ONE 50
 #endif
 
 #ifdef __cplusplus

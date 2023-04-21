@@ -5,5 +5,5 @@
 
 void component_name_do_something()
 {
-    CMP_LOGI("something was done");
+    CMP_LOGI("something was done: %d", CONFIG_COMPONENT_NAME_CONFIG_ONE);
 }

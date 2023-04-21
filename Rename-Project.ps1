@@ -11,17 +11,15 @@ function Rename-Project {
 
     $TextReplacements = New-Object System.Collections.ArrayList
     $TextReplacements.AddRange((
-            [Tuple]::Create("$($SourceRootPath)/components/component_name/include/component_name/component_name.h", '__COMPONENT_NAME_H__', "__$($ComponentNameUpper)_H__"),
+            [Tuple]::Create("$($SourceRootPath)/components/component_name/include/component_name/component_name.h", 'COMPONENT_NAME', $ComponentNameUpper),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/include/component_name/component_name.h", 'component_name', $ComponentName),
-            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/assertion.h", '__COMPONENT_NAME_ASSERTION_H__', "__$($ComponentNameUpper)_ASSERTION_H__"),
-            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/config.h", '__COMPONENT_NAME_CONFIG_H__', "__$($ComponentNameUpper)_CONFIG_H__"),
-            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/config.h", 'CONFIG_COMP_NAME_', "CONFIG_$($ComponentNameUpper)_"),
-            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/log.h", '__COMPONENT_NAME_LOG_H__', "__$($ComponentNameUpper)_LOG_H__"),
-            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/log.h", 'component_name', $ComponentName),
+            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/assertion.h", 'COMPONENT_NAME', $ComponentNameUpper),
+            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/config.h", 'COMPONENT_NAME', $ComponentNameUpper),
+            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/log.h", 'COMPONENT_NAME', $ComponentNameUpper),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/src/component_name.c", 'component_name', $ComponentName),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/test/CMakeLists.txt", 'component_name', $ComponentName),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/Kconfig", 'Component_Name', $ComponentName),
-            [Tuple]::Create("$($SourceRootPath)/components/component_name/Kconfig", 'COMP_NAME', $ComponentNameUpper),
+            [Tuple]::Create("$($SourceRootPath)/components/component_name/Kconfig", 'COMPONENT_NAME', $ComponentNameUpper),
             [Tuple]::Create("$($SourceRootPath)/main/CMakeLists.txt", 'component_name', $ComponentName),
             [Tuple]::Create("$($SourceRootPath)/main/main.c", 'component_name', $ComponentName),
             [Tuple]::Create("$($SourceRootPath)/test/CMakeLists.txt", 'component_name', $ComponentName),
@@ -42,7 +40,7 @@ function Rename-Project {
         ))
 
     foreach ($TextReplacement in $TextReplacements) {
-        ((Get-Content -Path $TextReplacement.Item1 -Raw) -replace $TextReplacement.Item2, $TextReplacement.Item3) | Set-Content -Path $TextReplacement.Item1
+        ((Get-Content -Path $TextReplacement.Item1 -Raw) -creplace $TextReplacement.Item2, $TextReplacement.Item3) | Set-Content -Path $TextReplacement.Item1
     }
 
     foreach ($FileRenaming in $FileRenamings) {
