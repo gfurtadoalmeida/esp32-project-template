@@ -21,7 +21,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+      with:
+        fetch-depth: 0
+
     # This is needed only if you are working on the
     # esp32-project-template project; remove this step
     # if you are using this project as a template.
