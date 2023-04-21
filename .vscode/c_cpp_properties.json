@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "Linux",
+      "name": "Win32",
       "cStandard": "c11",
       "cppStandard": "c++17",
       "includePath": [
