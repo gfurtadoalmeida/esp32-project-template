@@ -13,7 +13,7 @@ extern "C"
 
 #ifndef CONFIG_COMP_NAME_CONFIG_ONE
 /**
- * Event queue, enqueue wait time (ms).
+ * @brief Number for something nice.
  */
 #define CONFIG_COMP_NAME_CONFIG_ONE 50
 #endif
