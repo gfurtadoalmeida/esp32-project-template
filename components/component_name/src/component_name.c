@@ -10,7 +10,7 @@ extern "C"
 
 void component_name_do_something()
 {
-    CMP_LOGI("config value: %d", CONFIG_COMP_NAME_CONFIG_ONE);
+    CMP_LOGI("something was done");
 }
 
 #ifdef __cplusplus
