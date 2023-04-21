@@ -13,7 +13,7 @@ function Rename-Project {
     $TextReplacements.AddRange((
             [Tuple]::Create("$($SourceRootPath)/components/component_name/include/component_name/component_name.h", '__COMPONENT_NAME_H__', "__$($ComponentNameUpper)_H__"),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/include/component_name/component_name.h", 'component_name', $ComponentName),
-            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/check.h", '__COMPONENT_NAME_CHECK_H__', "__$($ComponentNameUpper)_CHECK_H__"),
+            [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/check.h", '__COMPONENT_NAME_ASSERTION_H__', "__$($ComponentNameUpper)_ASSERTION_H__"),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/config.h", '__COMPONENT_NAME_CONFIG_H__', "__$($ComponentNameUpper)_CONFIG_H__"),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/config.h", 'CONFIG_COMP_NAME_', "CONFIG_$($ComponentNameUpper)_"),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/log.h", '__COMPONENT_NAME_LOG_H__', "__$($ComponentNameUpper)_LOG_H__"),
