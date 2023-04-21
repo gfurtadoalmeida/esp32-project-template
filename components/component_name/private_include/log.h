@@ -8,6 +8,7 @@ extern "C"
 {
 #endif
 
+    /** @brief Description text used for logging. */
     static const char *TAG = "COMPONENT_NAME";
 
 /**
