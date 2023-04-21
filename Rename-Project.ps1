@@ -16,6 +16,7 @@ function Rename-Project {
             [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/assertion.h", 'COMPONENT_NAME', $ComponentNameUpper),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/config.h", 'COMPONENT_NAME', $ComponentNameUpper),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/private_include/log.h", 'COMPONENT_NAME', $ComponentNameUpper),
+            [Tuple]::Create("$($SourceRootPath)/components/component_name/src/component_name.c", 'COMPONENT_NAME', $ComponentNameUpper),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/src/component_name.c", 'component_name', $ComponentName),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/test/CMakeLists.txt", 'component_name', $ComponentName),
             [Tuple]::Create("$($SourceRootPath)/components/component_name/Kconfig", 'Component_Name', $ComponentName),
