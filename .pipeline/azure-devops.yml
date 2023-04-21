@@ -12,7 +12,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  - name: run_new_component_script
+  - name: run_rename_project_script
     value: true
   - name: esp_docker_tag
     value : v4.4.4
@@ -35,7 +35,7 @@ jobs:
     # if you are using this project as a template.
     - task: PowerShell@2
       displayName: Run Rename-Project.ps1
-      condition: and(succeeded(), eq(variables.run_new_component_script, true))
+      condition: and(succeeded(), eq(variables.run_rename_project_script, true))
       inputs:
         targetType: 'filePath'
         failOnStderr: true
