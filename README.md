@@ -20,7 +20,7 @@ ESP32 project template with build pipeline, enhanced VS Code support and more.
   * Increased performance as functions in ROM run faster than functions from flash. 
   * Functions in ROM can run when flash instruction cache is disabled.
 * Sample [Kconfig](/components/component_name/Kconfig) file for component configuration through [menuconfig](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/kconfig.html).
-* Watchdog disabled when testing (`CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0` not set).
+* Watchdogs disabled when testing.
 
 ## Documentation
 
