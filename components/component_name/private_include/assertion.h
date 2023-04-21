@@ -1,12 +1,12 @@
 #ifndef __COMPONENT_NAME_ASSERTION_H__
 #define __COMPONENT_NAME_ASSERTION_H__
 
+#include "log.h"
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif
-
-#include "log.h"
 
 /**
  * @brief Returns a given value if the condition passed is false.
