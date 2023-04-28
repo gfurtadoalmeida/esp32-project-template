@@ -1,4 +1,4 @@
-# ESP32 Project Template
+# ESP32 - Project Template
 
 ![GitHub Build Status](https://github.com/gfurtadoalmeida/esp32-project-template/actions/workflows/build.yml/badge.svg) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=esp32_project_template&metric=bugs)](https://sonarcloud.io/summary/new_code?id=esp32_project_template) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=esp32_project_template&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=esp32_project_template) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=esp32_project_template&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=esp32_project_template) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=esp32_project_template&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=esp32_project_template)  
 ESP32 project template with build pipeline, enhanced VS Code support and more.  
