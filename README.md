@@ -6,10 +6,11 @@ ESP32 project template with build pipeline, enhanced VS Code support and more.
 ## Characteristics
 
 * ESP-IDF: [v4.4.4](https://docs.espressif.com/projects/esp-idf/en/v4.4.4/esp32/index.html)
+* Written in **C** using just the [ESP-IDF](https://github.com/espressif/esp-idf) framework.
 * Build pipelines with [Sonar Cloud](https://sonarcloud.io/) integration: 🚀
   * Azure DevOps
-  * GitHub Action
-* [VS Code task](https://code.visualstudio.com/docs/editor/tasks) for tests (requires [ESP-IDF extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension)): 🧪
+  * GitHub Actions
+* [VS Code tasks](https://code.visualstudio.com/docs/editor/tasks) for tests (requires [ESP-IDF extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension)): 🧪
   * Build test
   * Flash test
   * Monitor test
@@ -19,7 +20,7 @@ ESP32 project template with build pipeline, enhanced VS Code support and more.
   * Stack usage reduction for functions that call string formating functions.
   * Increased performance as functions in ROM run faster than functions from flash. 
   * Functions in ROM can run when flash instruction cache is disabled.
-* Sample [Kconfig](/components/component_name/Kconfig) file for component configuration through [menuconfig](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/kconfig.html).
+* Configurable: with sample [Kconfig](/components/component_name/Kconfig) file for component configuration through [menuconfig](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/kconfig.html).
 * Watchdogs disabled when testing.
 
 ## Documentation
