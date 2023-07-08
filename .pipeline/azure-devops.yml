@@ -15,7 +15,7 @@ variables:
   - name: run_rename_project_script
     value: true
   - name: esp_docker_tag
-    value : v4.4.4
+    value : v5.0.2
   - group: sonarcloud
     # This variable group must have:
     # - sonarcloud_organization

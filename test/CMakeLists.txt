@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.16)
 
 set(EXTRA_COMPONENT_DIRS "../components")
 set(TEST_COMPONENTS "component_name" CACHE STRING "List of components to test")
