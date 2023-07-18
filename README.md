@@ -7,9 +7,7 @@ ESP32 project template with build pipeline, enhanced VS Code support and more.
 
 * ESP-IDF: [v5.0.2](https://docs.espressif.com/projects/esp-idf/en/v5.0.2/esp32/index.html)
 * Written in **C** using just the [ESP-IDF Framework](https://github.com/espressif/esp-idf).
-* Build pipelines with [Sonar Cloud](https://sonarcloud.io/) integration: 🚀
-  * Azure DevOps
-  * GitHub Actions
+* GitHub Wokflow with [Sonar Cloud](https://sonarcloud.io/) integration 🚀
 * [VS Code tasks](https://code.visualstudio.com/docs/editor/tasks) for tests (requires [ESP-IDF extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension)): 🧪
   * Build test
   * Flash test
