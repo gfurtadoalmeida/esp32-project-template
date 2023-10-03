@@ -48,4 +48,4 @@ jobs:
 
     - name: Build Test
       shell: pwsh
-      run: docker run --rm -env LC_ALL='C.UTF-8' -v ${{github.workspace}}:/project -w /project ${{env.esp_docker_image}} idf.py -C ./test build
+      run: docker run --rm --env LC_ALL='C.UTF-8' -v ${{github.workspace}}:/project -w /project ${{env.esp_docker_image}} idf.py -C ./test build
