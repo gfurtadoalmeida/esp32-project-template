@@ -62,7 +62,7 @@ jobs:
       shell: pwsh
       run: |
         $compress = @{
-          Path = "lib\", "CMakeLists.txt", "Kconfig"
+          Path = "*"
           CompressionLevel = "Optimal"
           DestinationPath = $Env:ZIP_NAME
         }
