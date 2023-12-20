@@ -36,7 +36,7 @@ jobs:
       shell: pwsh
       run: docker pull ${{env.esp_docker_image}}
 
-    - name: Build with Sonar
+    - name: Build
       shell: pwsh
       run: docker run --rm --env LC_ALL='C.UTF-8' -v ${{github.workspace}}:/project -w /project ${{env.esp_docker_image}} idf.py build
 
@@ -51,7 +51,7 @@ jobs:
       contents: write
 
     env:
-      ZIP_NAME: es32-project-template.${{github.ref_name}}.zip
+      ZIP_NAME: esp32-project-template.${{github.ref_name}}.zip
 
     steps:
     - uses: actions/checkout@v3
