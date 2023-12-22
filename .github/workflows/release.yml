@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      run_rename_project_script: ${{true}}
-      esp_docker_image: gfurtadoalmeida/esp32-docker-sonar:v5.1
+      RUN_RENAME_PROJECT_SCRIPT: ${{true}}
+      ESP_DOCKER_IMAGE: gfurtadoalmeida/esp32-docker-sonar:v5.1
 
     steps:
     - uses: actions/checkout@v3
@@ -22,7 +22,7 @@ jobs:
     # esp32-project-template project; remove this step
     # if you are using this project as a template.
     - name: Run Rename-Project.ps1
-      if: ${{env.run_rename_project_script}}
+      if: ${{env.RUN_RENAME_PROJECT_SCRIPT}}
       shell: pwsh
       run: ./Rename-Project.ps1 '${{github.workspace}}' esp32-project-template
 
@@ -34,15 +34,15 @@ jobs:
 
     - name: Pull ESP-IDF Image
       shell: pwsh
-      run: docker pull ${{env.esp_docker_image}}
+      run: docker pull ${{env.ESP_DOCKER_IMAGE}}
 
     - name: Build
       shell: pwsh
-      run: docker run --rm --env LC_ALL='C.UTF-8' -v ${{github.workspace}}:/project -w /project ${{env.esp_docker_image}} idf.py build
+      run: docker run --rm --env LC_ALL='C.UTF-8' -v ${{github.workspace}}:/project -w /project ${{env.ESP_DOCKER_IMAGE}} idf.py build
 
     - name: Build Test
       shell: pwsh
-      run: docker run --rm --env LC_ALL='C.UTF-8' -v ${{github.workspace}}:/project -w /project ${{env.esp_docker_image}} idf.py -C ./test build
+      run: docker run --rm --env LC_ALL='C.UTF-8' -v ${{github.workspace}}:/project -w /project ${{env.ESP_DOCKER_IMAGE}} idf.py -C ./test build
 
   release:
     runs-on: windows-2022
@@ -62,9 +62,9 @@ jobs:
       shell: pwsh
       run: |
         $compress = @{
-          Path = "*"
-          CompressionLevel = "Optimal"
-          DestinationPath = $Env:ZIP_NAME
+          Path = '*'
+          CompressionLevel = 'Optimal'
+          DestinationPath = '${{env.ZIP_NAME}}'
         }
         Compress-Archive @compress
 
