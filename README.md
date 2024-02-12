@@ -16,11 +16,11 @@ ESP32 project template with build pipeline, enhanced VS Code support and more.
 * [Newlib nano formating](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/performance/size.html?#newlib-nano-formatting) enabled for `printf/scanf`, with the following advantages:
   * Binary size reduction (25KB~50KB) as they are already in ESP32 ROM.
   * Stack usage reduction for functions that call string formating functions.
-  * Increased performance as functions in ROM run faster than functions from flash. 
+  * Increased performance as functions in ROM run faster than functions from flash.
   * Functions in ROM can run when flash instruction cache is disabled.
 * Configurable: with sample [Kconfig](/components/component_name/Kconfig) file for component configuration through [menuconfig](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/kconfig.html).
 * Watchdogs disabled when testing.
 
 ## Documentation
 
-Everything is on the [wiki](https://github.com/gfurtadoalmeida/esp32-project-template/wiki).
+Everything is at the [docs](/docs) folder.
