@@ -35,7 +35,7 @@ Run the ```project.ps1 build``` command on the root folder.
 
 ## Debugging
 
-On the ["/.debug"](../blob/master/.debug/) folder you'll find interface configuration files for debug boards. Choose one and copy it to the ```%IDF_TOOLS_PATH%\tools\openocd-esp32\{version}\openocd-esp32\share\openocd\scripts\interface``` folder.
+In the [.debug](../.debug) folder you'll find interface configuration files for debug boards. Choose one and copy it to the ```%IDF_TOOLS_PATH%\tools\openocd-esp32\{version}\openocd-esp32\share\openocd\scripts\interface``` folder.
 
 ### Boards
 
@@ -43,7 +43,7 @@ On the ["/.debug"](../blob/master/.debug/) folder you'll find interface configur
 
 ### Driver Configuration
 
-1. Install the latest [FTDI VPC Driver](https://www.ftdichip.com/Drivers/VCP.htm).
+1. Install the latest [FTDI VPC Driver](https://ftdichip.com/drivers/vcp-drivers/).
 2. Plug the debug board.
 3. Open [Zadig](https://zadig.akeo.ie/) and replace the ```Dual RS232-HS (Interface 0)``` driver with WinUSB (```Options->List all devices```).
 
