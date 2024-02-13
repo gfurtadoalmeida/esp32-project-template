@@ -15,6 +15,10 @@ switch ($args[0]) {
         &docker.exe run --rm --env LC_ALL='C.UTF-8' -v ${ProjectFolder}:/project -w /project ${EspIdfDockerImage} idf.py fullclean -C ./test
     }
     Default {
-        Write-Error "Command not recognized.`nValid commands:`n`t* build`n`t* build-test`n`t* clean`n`t* clean-test"
+        Write-Host "Command not recognized. Valid commands:"
+        Write-Host "`t* build: build the main project"
+        Write-Host "`t* build-test: build the test project"
+        Write-Host "`t* clean: clean the main project build files"
+        Write-Host "`t* clean-test: clean the test project build files"
     }
 }
