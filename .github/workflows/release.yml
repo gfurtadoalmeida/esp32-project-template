@@ -11,12 +11,10 @@ jobs:
 
     env:
       RUN_RENAME_PROJECT_SCRIPT: ${{true}}
-      ESP_DOCKER_IMAGE: gfurtadoalmeida/esp32-docker-sonar:v5.1
+      ESP_DOCKER_IMAGE: gfurtadoalmeida/esp32-docker-sonar:v5.3
 
     steps:
     - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
     # This is needed only if you are working on the
     # esp32-project-template project; remove this step
