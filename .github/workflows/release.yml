@@ -65,6 +65,7 @@ jobs:
       with:
         allowUpdates: true
         artifacts: "${{env.ZIP_NAME}}"
+        generateReleaseNotes: true
         makeLatest: true
         name: ESP32 Project Template ${{github.ref_name}}
         removeArtifacts: false
