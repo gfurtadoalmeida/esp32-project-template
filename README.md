@@ -6,7 +6,7 @@ ESP32 project template with build pipeline, enhanced VS Code support and more.
 
 ## Characteristics
 
-* ESP-IDF: [v5.3](https://docs.espressif.com/projects/esp-idf/en/v5.3/esp32/index.html)
+* ESP-IDF: [v5.4](https://docs.espressif.com/projects/esp-idf/en/v5.4/esp32/index.html)
 * GitHub Workflows: 🚀
   * Development: [Sonar Cloud](https://sonarcloud.io/) integration when building the component.
   * Release: packages the component and generates release notes.
